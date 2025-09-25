@@ -153,19 +153,19 @@ class MainActivity : AppCompatActivity(), DatePickerDialog.OnDateSetListener, Ti
         }
     }
 
+    // Hasil implementasi dari interface "DatePickerDialog.OnDateSetListener" pada class main activity
     override fun onDateSet(p0: DatePicker?, p1: Int, p2: Int, p3: Int) {
-        TODO("Not yet implemented")
         // Gunakan p1, p2, p3 untuk mendapatkan tanggal, bulan, dan tahun
         val selectedDate = "$p3/${p2 + 1}/$p1"
-        // Toast berfungsi untuk menampilkan pesan singkat, dalam hal ini akan menampilkan tanggal yang dipilih
+        // Toast berfungsi untuk menampilkan pop-up pesan singkat, dalam hal ini akan menampilkan tanggal yang dipilih
         Toast.makeText(this@MainActivity, selectedDate,Toast.LENGTH_SHORT).show()
     }
 
+    // Sama halnya dengan onTimeSet, namun untuk TimePicker
     override fun onTimeSet(p0: TimePicker?, p1: Int, p2: Int) {
-        TODO("Not yet implemented")
         // Gunakan p1 dan p2 untuk mendapatkan jam dan menit yang dipilih
         val selectedTime = String.format("%02d:%02d", p1, p2)
-        // Toast berfungsi untuk menampilkan pesan singkat, dalam hal ini akan menampilkan jam dan menit yang dipilih
+        // Toast berfungsi untuk menampilkan pop-up pe san singkat, dalam hal ini akan menampilkan jam dan menit yang dipilih
         Toast.makeText(this@MainActivity, selectedTime,Toast.LENGTH_SHORT).show()
     }
 }
